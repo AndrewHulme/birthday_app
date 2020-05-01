@@ -17,7 +17,8 @@ class Birthday < Sinatra::Base
   end
 
   get '/birthday' do
-    session[:input_name]
+    @input_name = session[:input_name]
+    erb(:birthday)
   end
 
   run! if app_file == $0
