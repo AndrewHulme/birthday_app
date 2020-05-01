@@ -5,6 +5,7 @@ require 'shotgun'
 # shotgun ./lib/app.rb -p 4567 (4567 is port)
 
 class Birthday < Sinatra::Base
+  configure(:development) { set :session_secret, 'set' }
   enable :sessions
 
   get '/' do
