@@ -11,7 +11,8 @@ class Birthday < Sinatra::Base
   end
 
   post '/birthday' do
-    "It's your birthday!!!"
+    @name = params[:input_name]
+    @name
   end
 
   run! if app_file == $0
