@@ -1,1 +1,12 @@
-<%= @input_name %>
+<% date_and_time = Time.new %>
+<% @day = date_and_time.day %>
+<% @month = date_and_time.month %>
+
+<% @month_hash = { 1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April', 5 => 'May', 6 => 'June', 7 => 'July', 8 => 'August', 9 => 'September', 10 => 'October', 11 => 'Novemeber', 12 => 'December' } %>
+
+
+<% if @input_day.to_i == @day.to_i %>
+Happy Birthday <%= @input_name %>!
+<% else %>
+Your birthday will be in <%= @input_day.to_i - @day.to_i %> days, <%= @input_name %>.
+<% end %>
