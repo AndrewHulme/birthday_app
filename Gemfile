@@ -10,4 +10,5 @@ group :development, :test do
     gem "shotgun"
     gem "capybara"
     gem "selenium-webdriver"
+    gem "rspec"
 end
